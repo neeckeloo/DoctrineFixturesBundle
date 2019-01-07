@@ -74,7 +74,7 @@ EOT
         $ui = new SymfonyStyle($input, $output);
 
         /** @var ManagerRegistry $doctrine */
-        $doctrine = $this->getContainer()->get('doctrine');
+        $doctrine = $this->getDoctrine();
         $em       = $doctrine->getManager($input->getOption('em'));
 
         if (! $input->getOption('append')) {
